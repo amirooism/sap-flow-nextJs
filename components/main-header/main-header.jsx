@@ -1,9 +1,9 @@
-import Link from "next/link";
-import LogoImg from "@/assets/logo.png";
+import LogoImg from "@/assets/icons/Sap-Logo.png";
 import classes from "@/components/main-header/main-header.module.css";
 import Image from "next/image";
 import MainHeaderBackground from "./main-header-background";
-
+import Navlinks from "./nav-link";
+import Link from "next/link";
 
 export default function MainHeader() {
   return (
@@ -12,15 +12,18 @@ export default function MainHeader() {
       <header className={classes.header}>
         <Link href="/" className={classes.logo}>
           <Image src={LogoImg} alt="A plate with food on it" priority />
-          NextLevel Food
+          SAP Flow
         </Link>
         <nav className={classes.nav}>
           <ul>
             <li>
-              <Link href="/meals">Browse Meals</Link>
+              <Navlinks href="/meals">Browse Projects</Navlinks>
             </li>
             <li>
-              <Link href="/community">Foodies Community</Link>
+            <Navlinks href="/community">Community</Navlinks>
+            </li>
+            <li>
+            <Navlinks href="/community">About me</Navlinks>
             </li>
           </ul>
         </nav>
