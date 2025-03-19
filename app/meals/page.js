@@ -2,9 +2,14 @@ import Link from "next/link";
 import classes from "./page.module.css";
 import MealsGrid from "@/components/meals/meals-grid";
 import { getMeals } from "@/lib/meals";
+import { Suspense } from "react";
+
+async function Meals() {
+  const meals = await getMeals(); //we can get our data without useEffect or any fetch request in clinet components
+  return <MealsGrid meals={meals} />;
+}
 
 export default async function MealsPage() {
- const meals =  await getMeals() //we can get our data without useEffect or any fetch request in clinet components 
   return (
     <>
       <header className={classes.header}>
@@ -15,10 +20,12 @@ export default async function MealsPage() {
         <p>Choose your favorite project and work with it.</p>
         <p className={classes.cta}>
           <Link href="/meals/share">Share Your New Project</Link>
-        </p> 
+        </p>
       </header>
       <main className={classes.main}>
-        <MealsGrid meals={meals}/>
+        <Suspense fallback={<p className={classes.loading}>Fetching Projects ...</p>}>
+          <Meals/>
+        </Suspense>
       </main>
     </>
   );
