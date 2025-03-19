@@ -9,7 +9,7 @@
   
   .link:hover,
   .link:active {
-    background: linear-gradient(90deg, #085f9c, #085f9c);
+    background: linear-gradient(90deg, #0fffcb, #43ffd0);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -17,7 +17,7 @@
   }
   
   .active {
-    background: linear-gradient(90deg, #0a2b47, #085f9c);
+    background: linear-gradient(90deg, #0fffcb, #0fffcb);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

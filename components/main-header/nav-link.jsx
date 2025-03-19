@@ -19,3 +19,5 @@ export default function Navlinks({ href, children }) {
     </Link>
   );
 }
+
+/// I cretae this component so i can just Renders the link on the client side not whole main-headr 
