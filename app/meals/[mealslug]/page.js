@@ -1,9 +1,16 @@
 import Image from "next/image";
 import classes from "./page.module.css";
-import {getMeal} from '@/lib/meals'
+import { getMeal } from "@/lib/meals";
+import { notFound } from "next/navigation";
 export default function DynamicRoutes({ params }) {
-const meal =  getMeal(params.mealslug)
-meal.instructions = meal.instructions.replace(/\n/g, '<br/>')
+  const meal = getMeal(params.mealslug);
+  if (!meal) {
+    notFound() //it look up to closest not-found.js :)
+  }
+  
+  meal.instructions = meal.instructions.replace(/\n/g, "<br/>");
+  // in line above i replace the html form to the line breack form
+  
 
   return (
     <>
@@ -12,7 +19,7 @@ meal.instructions = meal.instructions.replace(/\n/g, '<br/>')
           <Image src={meal.image} alt={meal.title} fill />
         </div>
         <div className={classes.headerText}>
-          <h1>{ meal.title}</h1>
+          <h1>{meal.title}</h1>
           <p className={classes.creator}>
             by <a href={`mailto:${meal.creator_email}`}>{meal.creator}</a>
           </p>
@@ -20,9 +27,12 @@ meal.instructions = meal.instructions.replace(/\n/g, '<br/>')
         </div>
       </header>
       <main>
-        <p className={classes.instructions} dangerouslySetInnerHTML={{
+        <p
+          className={classes.instructions}
+          dangerouslySetInnerHTML={{
             __html: meal.instructions,
-        }}></p>
+          }}
+        ></p>
       </main>
     </>
   );
