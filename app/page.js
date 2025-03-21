@@ -27,7 +27,7 @@ export default function Home() {
           <p>
             SAPFlow is a dynamic and intuitive platform designed specifically
             for SAP students to manage their projects and streamline their tasks
-            efficiently. Whether you're working on an individual project or
+            efficiently. Whether youre working on an individual project or
             collaborating with a team, SAPFlow provides a structured workspace
             to organize ideas, set deadlines, and track progress effortlessly.
             The platform offers an integrated to-do list, allowing users to
