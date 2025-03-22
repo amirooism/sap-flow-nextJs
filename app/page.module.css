@@ -12,7 +12,7 @@
 }
 
 .hero {
-  color: #0f436b;
+  color: #020202;
   font-size: 1.5rem;
 }
 
@@ -22,7 +22,7 @@
   font-family: 'Montserrat', sans-serif;
   letter-spacing: 0.15rem;
   text-transform: uppercase;
-  background: linear-gradient(90deg, #1596e2, #0f436b);
+  background: linear-gradient(90deg, #000000, #0f436b);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

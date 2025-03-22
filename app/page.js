@@ -13,7 +13,10 @@ export default function Home() {
         <div>
           <div className={classes.hero}>
             <h1>Manage projects and tasks with ease</h1>
-            <p>Test & share UI5/JS/React projects from all over the world.</p>
+            <p>
+              Discover, Test, and Collaborate on Innovative UI5, JavaScript,
+              and React Projects Worldwide.
+            </p>
           </div>
           <div className={classes.cta}>
             <Link href="/community">Join the Community</Link>
@@ -25,17 +28,12 @@ export default function Home() {
         <section className={classes.section}>
           <h2>How it works</h2>
           <p>
-            SAPFlow is a dynamic and intuitive platform designed specifically
-            for SAP students to manage their projects and streamline their tasks
-            efficiently. Whether youre working on an individual project or
-            collaborating with a team, SAPFlow provides a structured workspace
-            to organize ideas, set deadlines, and track progress effortlessly.
-            The platform offers an integrated to-do list, allowing users to
-            break down complex projects into manageable tasks while ensuring
-            deadlines are met. With its clean and user-friendly interface,
-            SAPFlow enhances productivity by keeping all project-related
-            information in one centralized location, making it easier to stay
-            focused and on track.
+            SAP Flow is a streamlined project management platform tailored
+            specifically for SAP students. Easily create, manage, and track your
+            SAP-related projects within an intuitive interface built with
+            Next.js and React. Leverage powerful backend integration for
+            efficient data handling, personalize your user profile, and engage
+            with interactive quizzes to enrich your learning experience.
           </p>
           <p>
             Beyond simple task management, SAPFlow fosters collaboration and
